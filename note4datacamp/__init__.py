@@ -2,7 +2,7 @@
 
 __author__ = """Ryan Xu"""
 __email__ = 'ryan.y.xu@hotmail.com'
-__version__ = '0.1.0'
+__version__ = '1.0.0'
 
 from .main import transcript_section
 from .main import typesetting_instruction
