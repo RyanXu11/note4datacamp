@@ -4,7 +4,7 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
@@ -17,17 +17,15 @@ test_requirements = ['pytest>=3', ]
 setup(
     author="Ryan Xu",
     author_email='ryan.y.xu@hotmail.com',
-    python_requires='>=3.6',
+    python_requires='>=3.8',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
-    description="A Python package to help with note-taking in DATACAMP courses.",
+    description="A Python package to help with note-taking in DataCamp courses.",
     install_requires=requirements,
     long_description=readme + '\n\n' + history,
     include_package_data=True,
