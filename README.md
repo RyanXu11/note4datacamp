@@ -2,19 +2,29 @@
 note4datacamp
 =============
 
-## Travis CI Badge & CODECOV Badge
+## Badges
 
-
+[![workflow for Codecov](https://github.com/RyanXu11/note4datacamp/actions/workflows/workflow.yml/badge.svg)](https://github.com/RyanXu11/note4datacamp/actions/workflows/workflow.yml)
 
 
 A Python package to help with note-taking in DATACAMP courses.
+
+It can type setting in order to read in jupyter notebook, and `emphasize` the functions, variables such as `__version__`, `pyspark.sql.functions()` or `createOrReplaceTempView`, etc.
 
 
 
 Features
 --------
 
-* TODO
+There are 3 functions for different type documents:
+- `transcript_section(text)`
+Typesetting for video transcript and main part for exercise.
+
+- `typesetting_instruction(text)`
+Typesetting for instruction part of exercise.
+
+- `typesetting_answer(text)`
+Typesetting for answer part which are checkbox.
 
 Credits
 -------
