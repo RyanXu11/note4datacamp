@@ -26,6 +26,8 @@ Typesetting for instruction part of exercise.
 - `typesetting_answer(text)`
 Typesetting for answer part which are checkbox.
 
+Of course, there are other types document in the exercises, hope I can update later for more situations.
+
 Credits
 -------
 
