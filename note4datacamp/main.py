@@ -5,7 +5,7 @@ import re
 from note4datacamp.tools import empSpecialWords
 
 
-def transcript_section(text):
+def transcript_section(text, myspecial=None):
     """Transfer the transcript part
 
     Parameters
@@ -28,14 +28,14 @@ def transcript_section(text):
             finalline += "\n\n## "
         else:
             finalline += "\n"
-        finalline += empSpecialWords(line)
+        finalline += empSpecialWords(line, myspecial)
         finaltext += finalline
     return finaltext
     # ip = get_ipython()
     # ip.set_next_input(transcript_section(text), replace=False)
 
 
-def typesetting_instruction(text):
+def typesetting_instruction(text, myspecial=None):
     """Transfer the instruction part
 
     Parameters
@@ -60,13 +60,13 @@ def typesetting_instruction(text):
             if len(line.strip()) > 0:
                 finaltext += '- ' + line.strip() + '\n'
         lineno += 1
-    finaltext = empSpecialWords(finaltext)
+    finaltext = empSpecialWords(finaltext, myspecial)
     return finaltext
     # ip = get_ipython()
     # ip.set_next_input(typesetting_instruction(text), replace=False)
 
 
-def typesetting_answer(text):
+def typesetting_answer(text, myspecial=None):
     """Transfer the answer part
 
     Parameters
@@ -101,7 +101,7 @@ def typesetting_answer(text):
                 justpress = False
                 finaltext += '\n- [ ] '
         lineno += 1
-    finaltext = empSpecialWords(finaltext)
+    finaltext = empSpecialWords(finaltext, myspecial)
     return finaltext
     # ip = get_ipython()
     # ip.set_next_input(typesetting_answer(text), replace=False)

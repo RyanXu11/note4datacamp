@@ -127,8 +127,10 @@ pyspark.sql test test.test pandas.DataFrame.
 .mean()
 .sql.mean Yes, .yes.yes this the .last.
 the last.
+True or False? new test
 '''
-        result, find = findSpecialWords(example)
+        myspecial = ['True', 'False']
+        result, find = findSpecialWords(example, myspecial)
         expectation = ['_help_', '_F', '_B', '_',
                        'pyspark.sql.functions.split()', 'pyspark.sql.functions()',
                        'spark.getOrCreate()', 'reverseString()',
@@ -136,7 +138,7 @@ the last.
                        '"xxx"', '"www"', '".uuu"', '"-vvv"',
                        'createOrReplaceTempView', 'PySpark', 'numPy', 'NumPy',
                        'pyspark.sql.functions', 'pyspark.sql', 'test.test', 'pandas.DataFrame',
-                       '.mean()', '.sql.mean', '.yes.yes', '.last']
+                       '.mean()', '.sql.mean', '.yes.yes', '.last', 'True', 'False']
         print('expectation: ', expectation, 'result:', result)
         assert find
         assert expectation == result
